@@ -1,5 +1,7 @@
 # pbjson
 
+## Project Breadcrumbs JSON 
+
 A lightweight decision and work logger for projects developed with Claude AI assistance.
 
 Track architectural decisions, completed work, open questions, and project context—in human-readable, git-friendly JSON files. Designed to work within constrained environments (like Claude's project file system) with a single-file deployment model.
