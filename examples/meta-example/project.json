@@ -1,0 +1,30 @@
+{
+  "what_we_decided": [
+    "2026-01-08 - Use prefix-based state files (e.g., 'meta-tracking-state.json') instead of nested directories due to Anthropic project file upload constraints",
+    "2026-01-08 - Only record decisions after user agreement - proposals should be questions or conversation, not 'decided' entries",
+    "2026-01-08 - State tracking is for record-keeping, not communication - always explain decisions/questions to user in natural language before/during tool calls",
+    "2026-01-08 - Keep 'important_files' field but constrain to entry points only (3-5 max) - purpose is navigation/onboarding, not exhaustive file tracking",
+    "2026-01-09 - Do NOT include init-subsystem command in MVP - philosophy prioritizes constraint-aware simplicity over comprehensive features"
+  ],
+  "what_we_built": [
+    "2026-01-08 - Enhanced update.py with --subsystem flag and colon syntax (command:subsystem) for multi-file state tracking",
+    "2026-01-09 - pbjson.py refactored with comprehensive docstrings, type hints, section organization (4 sections)",
+    "2026-01-09 - README.md - comprehensive guide with philosophy, usage, constraints, FAQ"
+  ],
+  "what_we_need_to_decide": [
+    "2026-01-08 - What work should 'important_files' field do - current uses are inconsistent (planned vs actual files, varying granularity)"
+  ],
+  "what_we_resolved": [
+    "2026-01-08 - How to handle Claude presenting updated files - should Claude auto-call present_files after each update.py execution? \u2192 Decided: Claude should auto-call present_files() after each update.py execution to ensure user sees changes immediately",
+    "2026-01-09 - Should we add an init command for creating subsystems, or rely on manual creation / auto-creation on first use? \u2192 Decided: Decided NO for MVP - users can manually create subsystem files or auto-create on first command, reduces codebase complexity, keeps tool focused"
+  ],
+  "important_files": [
+    "2026-01-09 - examples/ - four realistic example projects (research learning, web app, novel, dissertation) demonstrating pbjson across domains"
+  ],
+  "context": [
+    "2026-01-08 - Tracking system started with linear append-only log in project.json - working well for single-thread MVP development",
+    "2026-01-08 - Two syntax options: '--subsystem tracking decided \"...\"' or shorter 'decided:tracking \"...\"' both work",
+    "2026-01-08 - important_files purpose: Entry points for tasks (max 3-5) - 'where do I start for X?' Examples: main entry point, test starting point, config template",
+    "2026-01-09 - Identified pbjson use case beyond software: creative writing, academic research, learning projects"
+  ]
+}

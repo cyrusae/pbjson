@@ -1,0 +1,15 @@
+{
+  "what_we_decided": [
+    "2026-01-09 - Track README development separately from main project state to keep documentation discussions organized"
+  ],
+  "what_we_built": [
+    "2026-01-09 - Examples section added to README between JSON Structure and Best Practices (~line 172-190), includes domain coverage and AI-generated disclosure"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [
+    "2026-01-09 - Should Examples section go between 'Understanding the JSON Structure' and 'Best Practices' (~line 172)? Proposed content: domain coverage (research/learning, web app, novel, dissertation), emphasize non-software use cases, explain these are realistic snapshots not toy demos \u00e2\u2020\u2019 Decided: Section placed between 'Understanding the JSON Structure' and 'Best Practices' with AI-generated disclosure note and space for future real-world examples"
+  ],
+  "important_files": [],
+  "context": [],
+  "subsystem": "readme"
+}
