@@ -4,32 +4,43 @@
 
 A lightweight decision and work logger for projects developed with Claude AI assistance.
 
-Track architectural decisions, completed work, open questions, and project context—in human-readable, git-friendly JSON files. Designed to work within constrained environments (like Claude's project file system) with a single-file deployment model.
+Let your AI assistant track architectural decisions, completed work, open questions, and project context—in human-readable, git-friendly JSON files. Designed to work within constrained environments (like Claude's project file system) with a single-file deployment model. 
 
 ## Why pbjson?
 
 When working with AI assistants like Claude on long-term projects, context gets lost between conversations. You find yourself re-explaining decisions, searching through chat history for "what did we decide about X?", or losing track of what's already built.
 
-**pbjson solves this by:**
+### pbjson solves this by:
+
 - **Preserving decisions** across conversation boundaries
 - **Making context searchable** (git-friendly JSON means you can grep for decisions)
 - **Keeping AI assistants aligned** with your project's architectural choices
 - **Working within constraints** (single-file deployment, no external dependencies)
 - **Staying human-readable** for code review and collaboration
 
+**Crucially:** *You* don't run `pbjson.py`--Claude does. **pbjson** lets your AI assistant document progress in a format you can read, that's lightweight and append-only for consistent results, without making the human in the loop responsible for documentation.
+
 ## Using pbjson
 
 ### Quick Start
 
-1. **Copy `pbjson.py` to your project root**
+1. **Copy `pbjson.py` to your project context files**
 2. **Add the custom instructions** (below) to your Claude project
 3. **Start tracking:** `./pbjson.py decided "First architectural decision"`
+4. **Sync your progress:** See "Manual Sync" instructions below
 
-The tool creates `project.json` automatically on first use.
+The tool should create `project.json` automatically on first use and any subproject files when invoked. If you're having issues with this, initialize `.json` files manually in project context (see skeleton).
 
 ### Intended use model
 
 **Where:** In any project developed with Claude (especially long-term ones) 
+
+**How:** `pbjson.py` is designed to go in a Claude project context in the web/app interface. **The script creates commands that Claude can run in its own server environment to document your conversations,** and the attached custom instructions provide structure for usage.
+
+**Why:** Pick your favorite reason--
+
+1. The original developer prefers working in the conversation interface with Claude and then screening code himself, and **pbjson** is designed to accommodate that. (We're actively interested in accommodating other workflows--see "Contributing"!)
+2. Depending on Claude AI's web interface means **pbjson** is as portable as Claude--do you want to work on your project's architecture on the bus? In a waiting room? Anywhere you can have the Claude app open? Now you have your full context and structure, with the state-tracking it needs.
 
 ### Add this to your custom instructions:
 
@@ -67,6 +78,31 @@ FIELD PURPOSES:
 - important_files: Entry points only (3-5 max) - "where do I start for X task?"
 - context: Background information, constraints, user preferences, anything else to remember
 ```
+
+### Manual Sync and Directory Limitations
+
+**Important:** If you use pbjson within a Claude Project, you must manually sync files between the Claude conversation interface and a) your *project context*, b) your local git repository. 
+
+Claude's project file system doesn't auto-sync with external version control and cannot write directly to the project context from /outputs. It also does not support nested file structures: effective "nesting" is contingent on use of file prefixes. 
+
+(Claude instances are *not* aware of these limitations of their UI unless told directly, and they will often infer otherwise.) 
+
+**The workarounds:** 
+
+- Track "nested" files with prefixes: `*-state.json` files
+- Claude uses `present_files()` after each **pjson** call, showing you the updated `.json` file
+- Select "Add to project" or manually copy into project context to sync
+
+This approach is most effective with **one file per working conversation thread**. Use the subproject system to accommodate this if you have multiple running threads at a time.
+
+**Workflow:**
+
+1. Have Claude autonomously track changes in a conversation thread using `./pbjson.py` in its environment
+2. When Claude presents the updated `.json` file, add it to your project, replacing the previous version
+3. To sync for your own repos, download `project.json` and any `*-state.json` files
+4. Commit to your git repository, replacing the previous versions' contents
+
+This is a limitation of the Claude platform, not pbjson itself. We're open to better solutions, but Claude instances aren't capable of troubleshooting the issue themselves.
 
 ## Understanding the JSON Structure
 
@@ -112,6 +148,27 @@ For complex projects, create separate state files per subsystem:
 
 Each subsystem file has the same structure as `project.json`.
 
+**pbjson.py** should be capable of initializing its own project files when run by a Claude instance, but if you run into issues, you can resolve this by initializing an empty `.json` file in your project context:
+
+```json
+{
+  "what_we_decided": [
+  ],
+  "what_we_built": [
+  ],
+  "what_we_need_to_decide": [
+  ],
+  "what_we_resolved": [
+  ],
+  "important_files": [
+  ],
+  "context": [
+  ]
+}
+```
+
+Name the file in your first message and Claude will be able to use it going forward.
+
 ## Best Practices
 
 ### When to Use Each Command
@@ -150,27 +207,16 @@ Found a bug? Have a feature idea? Want to improve the docs?
 - Feature requests with use cases
 - Documentation improvements
 - Questions about usage
+- Applicability to other AI assistants and workflows
+- Use cases in other domains (writing, creative projects)
 
 **Pull requests welcome!** Please include:
 - Clear description of what changes and why
 - Any relevant examples or test cases
-
-## Development Notes
-
-### Manual Sync Limitation
-
-**Important:** If you use pbjson within a Claude Project, you must manually sync files between the Claude interface and your local git repository. Claude's project file system doesn't auto-sync with external version control.
-
-**Workflow:**
-1. Make changes in Claude using pbjson
-2. Download updated `project.json` and any `*-state.json` files
-3. Commit to your git repository
-4. Upload updated files back to Claude if continuing work
-
-This is a limitation of the Claude platform, not pbjson itself. We're exploring better solutions.
+- Any questions or clarifications regarding your implementation
 
 ### Why "pbjson"?
 
 **Project Breadcrumbs JSON** — leaving a trail of decisions so you (and your AI assistant) can find your way back.
 
-*Full disclosure: I didn't come up with the pun. That was fate.* 😄
+*Full disclosure: I didn't come up with the pun. That was fate, in the form of Claude Sonnet 4.5 itself: this project was named by its main user audience!* 
