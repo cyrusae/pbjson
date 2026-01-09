@@ -200,7 +200,9 @@ Or commit everything for full team transparency (recommended for open source).
 
 Found a bug? Have a feature idea? Want to improve the docs?
 
-**Open an issue:** [GitHub Issues](https://github.com/cyrusae/pbjson/issues) — We especially welcome:
+### Open an issue:
+[GitHub Issues](https://github.com/cyrusae/pbjson/issues) — We especially welcome:
+
 - Bug reports with reproduction steps
 - Feature requests with use cases
 - Documentation improvements and real-world examples
@@ -208,17 +210,19 @@ Found a bug? Have a feature idea? Want to improve the docs?
 - Applicability to other AI assistants and workflows
 - Use cases in other domains (writing, creative projects)
 
-**Pull requests welcome!** Please include:
+### Pull requests welcome!
+Please include:
+
 - Clear description of what changes and why
 - Any relevant examples or test cases
 - Any questions or clarifications regarding your work
 
-**When using AI assistance:**
+### When using AI assistance:
 - **pbjson** is designed around constraints that AI assistants like Claude have no first-hand experience of
 - Agents can be exceptionally helpful in revising and troubleshooting code, but may misunderstand its use case
 - They do not necessarily understand that **the user is the AI agent itself**--but you can! 
 
-### Why "pbjson"?
+## Why "pbjson"?
 
 **Project Breadcrumbs JSON** — leaving a trail of decisions so you (and your AI assistant) can find your way back.
 
