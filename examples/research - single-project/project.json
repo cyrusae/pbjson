@@ -1,0 +1,31 @@
+{
+  "what_we_decided": [
+    "2026-01-09 - Focus on mechanistic interpretability as main thread",
+    "2026-01-12 - Study scaling laws as gateway to interpretability work"
+  ],
+  "what_we_built": [
+    "2026-01-09 - Attention mechanism visualization (attention_viz.py)",
+    "2026-01-10 - Residual connection playground notebook (residuals.ipynb)",
+    "2026-01-11 - Paper summary: Attention Is All You Need (attention_is_all.md)",
+    "2026-01-15 - Toy transformer implementation (toy_transformer.py, 1000 lines)",
+    "2026-01-16 - Test suite comparing outputs to Hugging Face (test_outputs.py)",
+    "2026-01-18 - Learning summary blog post (blog_post.md)"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [
+    "2026-01-10 - Should I implement attention from scratch or use transformers library? → Decided: Build from scratch first for understanding, then compare with library implementation",
+    "2026-01-15 - Is mechanistic interpretability actually the right focus or should I learn scaling laws? → Decided: Pivot to scaling laws first, return to interpretability after building math foundation"
+  ],
+  "important_files": [
+    "2026-01-09 - README.md - overview of learning path and resources",
+    "2026-01-09 - papers/ - organized by topic, with reading notes",
+    "2026-01-15 - toy_transformer.py - reference implementation to learn from"
+  ],
+  "context": [
+    "2026-01-09 - Reading papers from Distill, Transformer Circuits, and arXiv",
+    "2026-01-09 - Using Claude Haiku for paper explanations and code review",
+    "2026-01-12 - Found that Anthropic's papers on scaling laws are more accessible than original DeepMind work",
+    "2026-01-15 - Realizing interpretability research requires deeper math background than I have",
+    "2026-01-18 - Next goal: contribute to open source interpretability projects"
+  ]
+}
