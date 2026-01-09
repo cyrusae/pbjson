@@ -152,18 +152,12 @@ Each subsystem file has the same structure as `project.json`.
 
 ```json
 {
-  "what_we_decided": [
-  ],
-  "what_we_built": [
-  ],
-  "what_we_need_to_decide": [
-  ],
-  "what_we_resolved": [
-  ],
-  "important_files": [
-  ],
-  "context": [
-  ]
+  "what_we_decided": [],
+  "what_we_built": [],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [],
+  "important_files": [],
+  "context": []
 }
 ```
 
