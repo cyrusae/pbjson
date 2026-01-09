@@ -90,17 +90,17 @@ Claude's project file system doesn't auto-sync with external version control and
 **The workarounds:** 
 
 - Track "nested" files with prefixes: `*-state.json` files
-- Claude uses `present_files()` after each **pjson** call, showing you the updated `.json` file
-- Select "Add to project" or manually copy into project context to sync
+- Claude uses `present_files()` after each **pbjson** call, showing you the updated `.json` file
+- Select "Add to project" or manually copy into project context to sync (delete superseded old files)
 
 This approach is most effective with **one file per working conversation thread**. Use the subproject system to accommodate this if you have multiple running threads at a time.
 
 **Workflow:**
 
 1. Have Claude autonomously track changes in a conversation thread using `./pbjson.py` in its environment
-2. When Claude presents the updated `.json` file, add it to your project, replacing the previous version
+2. When Claude presents the updated `.json` file, add it to your project, making sure to **replace** the previous version
 3. To sync for your own repos, download `project.json` and any `*-state.json` files
-4. Commit to your git repository, replacing the previous versions' contents
+4. Commit to your git repository
 
 This is a limitation of the Claude platform, not pbjson itself. We're open to better solutions, but Claude instances aren't capable of troubleshooting the issue themselves.
 
