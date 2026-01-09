@@ -8,7 +8,9 @@ Let your AI assistant track architectural decisions, completed work, open questi
 
 ## Why pbjson?
 
-When working with AI assistants like Claude on long-term projects, context gets lost between conversations. You find yourself re-explaining decisions, searching through chat history for "what did we decide about X?", or losing track of what's already built.
+When working with AI assistants like Claude on long-term projects, decisions happen in conversation. Code gets written, approaches get tried, questions get answered—but this context lives in chat logs, not in your actual codebase. 
+
+Then context gets lost. You find yourself re-explaining decisions, searching through chat history for "what did we decide about X?", or losing track of what's already built.
 
 ### pbjson solves this by:
 
@@ -16,7 +18,7 @@ When working with AI assistants like Claude on long-term projects, context gets 
 - **Making context searchable** (git-friendly JSON means you can grep for decisions)
 - **Keeping AI assistants aligned** with your project's architectural choices
 - **Working within constraints** (single-file deployment, no external dependencies)
-- **Staying human-readable** for code review and collaboration
+- **Staying human-readable** for review and collaboration
 
 **Crucially:** *You* don't run `pbjson.py`--Claude does. **pbjson** lets your AI assistant document progress in a format you can read, that's lightweight and append-only for consistent results, without making the human in the loop responsible for documentation.
 
@@ -169,14 +171,72 @@ Name the file in your first message and Claude will be able to use it going forw
 
 ## Best Practices
 
-### When to Use Each Command
+### Quick Reference
 
 - **`decided`**: Record architectural choices AFTER discussing with your team/AI. Not for proposals, only confirmed decisions.
 - **`built`**: Track completed work with searchable keywords in parentheses: `built "User auth (auth.py, login)"`
 - **`question`**: Capture open decisions that need input. Review these regularly.
 - **`file`**: Only for key entry points (3-5 max). Avoid listing every file—focus on "where do I start for X?"
 - **`context`**: Store constraints, user preferences, or background info that should persist across sessions.
-- **`resolve`**: Move questions to resolutions. Use keywords from the original question.
+- **`resolve`**: Move questions to resolutions.
+
+### When to Use Each Command
+
+**`decided` - Architectural decisions made with user agreement**
+
+Not proposals or suggestions—only decisions you've committed to.
+
+Examples:
+- "Use PostgreSQL for citation index"
+- "Implement caching at the API layer, not the DB layer"
+- "Defer OCR support to v0.2"
+
+Include your reasoning if it's not obvious. Future you will appreciate it.
+
+**`built` - Work completed and committed**
+
+Record it when it's done (not when you start it). Include searchable keywords so you can find it later.
+
+Examples:
+- "arxiv_fetcher.py - fetches papers from arXiv API"
+- "markdown_writer.py (generates Obsidian notes)"
+- "End-to-end test for paper pipeline (test_pipeline.py)"
+
+**`question` - Decisions needing input or discussion**
+
+Track open questions that are blocking progress or need a decision.
+
+Examples:
+- "Should we implement multi-file package structure or keep it monolithic?"
+- "What database should we use for citations—SQLite or CouchDB?"
+- "How to handle scanned PDFs with poor OCR?"
+
+**`resolved` - Questions that have been answered**
+
+When you answer a question, use `resolve` to move it here. This field shows the full mapping: "We asked X, and decided Y because Z."
+
+You'll see entries like:
+```
+2026-01-08 - Should we cache results? → Decided: Cache by DOI, invalidate on manual edit
+```
+
+**`important_files` - Entry points only (max 3-5 per project)**
+
+This is *not* for tracking all files—it's for answering "Where do I start?"
+
+Examples:
+- "orchestrator.py - main entry point for paper processing"
+- "test_pipeline.py - run this to test end-to-end"
+- ".env.example - copy and fill with API keys"
+
+**`context` - Constraints, preferences, background facts**
+
+Anything that helps future you (or a contributor) understand the project without asking.
+
+Examples:
+- "Token cost not a concern—can send full papers to Claude"
+- "Running on homelab K3s cluster, writes to Obsidian vault via CouchDB Livesync"
+- "User is learning Python—include ELI5 comments in code"
 
 ### Organizing Subsystems
 
@@ -196,6 +256,51 @@ Add to `.gitignore` if tracking sensitive decisions locally:
 
 Or commit everything for full team transparency (recommended for open source).
 
+## Philosophy
+
+### Minimalism
+
+**Single-file development:** Most Python tools expect you to manage package structures, virtual environments, and import paths. pbjson is intentionally a single `.py` file. Drop it in your project, run it, done.
+
+This works especially well in constrained environments—like Claude's project interface, where you can't manage multi-file packages.
+
+**Append-only log:** Every entry gets a date prefix. Nothing is ever overwritten or deleted (except when you resolve a question, and that preserves both the question and the answer for history).
+
+**No external dependencies:** **pbjson** uses only Python standard library: `json`, `sys`, `pathlib`, `datetime`. Nothing to install, nothing to break.
+
+**Minimal human involvment:** Designed to let the AI assistant handle the documentation--human work is only necessary when the literal interface requires it.
+
+### Decision-focused, not task-focused
+
+There are tools for tracking tasks (todo lists), features (GitHub issues), and timelines (project boards). pbjson doesn't compete with those.
+
+Instead, it tracks **why** things are the way they are:
+- Why did you choose this architecture?
+- What open questions are blocking progress?
+- What constraints are you operating under?
+- When you answered a question, how did you decide?
+
+### Limitations & What pbjson is NOT
+
+- **Not a task tracker.** Use GitHub Issues, Linear, or a todo app for tasks. pbjson is for capturing *why* decisions were made, not *what work* is pending.
+- **Not a metrics tool.** If you need burn-down charts, velocity tracking, or sprint planning, this isn't it. pbjson is append-only; it doesn't aggregate or analyze.
+- **Not a knowledge base.** For a searchable wiki of your project, use Notion, Obsidian, or a wiki tool. pbjson is a decision log, not a reference.
+- **Not a chat history.** It doesn't replace keeping your Claude conversations. It extracts the *decisions* from those conversations, not the full discussion.
+- **Not a code review tool.** Use pull requests for code review. pbjson tracks architectural decisions, not code changes.
+
+### Design Constraints
+
+pbjson was designed with these constraints in mind:
+
+- **Claude project file system**: No nested directories, single entry point preferred
+- **Human-readable**: JSON you can read and edit, not a binary database
+- **Git-friendly**: Clean diffs, works with version control
+- **No setup**: Copy one file, start using it
+- **No dependencies**: Works anywhere Python runs
+- **Portable:** Works anywhere the Claude app or web interface can run
+
+If you're building something without these constraints, you might prefer a full-featured tool. But if you're working in a constrained environment and need something that "just works," **pbjson** is for you.
+
 ## Contributing & Support
 
 Found a bug? Have a feature idea? Want to improve the docs?
@@ -211,7 +316,24 @@ Found a bug? Have a feature idea? Want to improve the docs?
 - Use cases in other domains (writing, creative projects)
 
 ### Pull requests welcome!
-Please include:
+
+The entire tool is in a single `pbjson.py` file for portability. Each section is clearly marked:
+
+- `# === CONFIGURATION & STATE STRUCTURE ===`
+- `# === STATE FILE I/O ===`
+- `# === STATE MANAGEMENT OPERATIONS ===`
+- `# === CLI PARSING & ENTRY POINT ===`
+
+Type hints and docstrings are comprehensive, so the code documents itself.
+
+If you want to extend pbjson:
+1. Add new commands by updating `COMMAND_TO_FIELD`
+2. Add new state file operations by adding functions in the STATE MANAGEMENT section
+3. Update the CLI in `main()` to route to your new function
+
+All of it fits in one file and stays readable.
+
+**When filing a pull request, please include:**
 
 - Clear description of what changes and why
 - Any relevant examples or test cases
@@ -221,6 +343,8 @@ Please include:
 - **pbjson** is designed around constraints that AI assistants like Claude have no first-hand experience of
 - Agents can be exceptionally helpful in revising and troubleshooting code, but may misunderstand its use case
 - They do not necessarily understand that **the user is the AI agent itself**--but you can! 
+
+Keep in mind that **pbjson is intentionally minimal**—it's a single-purpose, focused tool, not a Swiss Army knife.
 
 ## Why "pbjson"?
 
