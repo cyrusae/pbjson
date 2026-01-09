@@ -102,7 +102,7 @@ This approach is most effective with **one file per working conversation thread*
 3. To sync for your own repos, download `project.json` and any `*-state.json` files
 4. Commit to your git repository
 
-This is a limitation of the Claude platform, not pbjson itself. We're open to better solutions, but Claude instances aren't capable of troubleshooting the issue themselves.
+**This is a limitation of the Claude platform, not pbjson itself.** We're open to better solutions, but Claude instances aren't capable of troubleshooting the issue themselves.
 
 ## Understanding the JSON Structure
 
