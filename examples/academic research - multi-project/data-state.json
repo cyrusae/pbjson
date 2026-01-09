@@ -1,0 +1,44 @@
+{
+  "subsystem": "data",
+  "what_we_decided": [
+    "2026-02-10 - Extend recruitment 4 weeks for Institution 2, keep overall target at 500",
+    "2026-05-15 - Add follow-up probe question about major-specific support in remaining interviews"
+  ],
+  "what_we_built": [
+    "2026-02-01 - Pilot survey with 50 students (search: pilot_survey_results.csv)",
+    "2026-03-01 - Recruitment poster and email templates (search: recruitment_materials.md)",
+    "2026-03-01 - Participant information sheet and consent form (search: consent_form.md)",
+    "2026-04-15 - Survey data collection: 512 responses (search: survey_data_2026.csv)",
+    "2026-05-10 - Interviews 1-10 completed and transcribed (search: interview_transcripts_batch1/)",
+    "2026-05-30 - Interviews 11-30 completed with revised protocol (search: interview_transcripts_batch2-3/)",
+    "2026-06-15 - Initial coding scheme (search: codebook_v1.md, 23 codes)",
+    "2026-07-01 - Survey descriptive statistics (search: survey_descriptives.md)",
+    "2026-07-01 - Correlation matrix institutional support × persistence (search: correlation_analysis.md)",
+    "2026-07-10 - HLM results: institutional nesting effect (search: hlm_results.txt)",
+    "2026-07-20 - Thematic analysis: 6 major themes emerged (search: thematic_analysis.md)"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [
+    "2026-02-08 - Survey response rate is 38%—acceptable or need modifications? → Decided: Acceptable per advisor, but revised questions 7-12 based on low variance",
+    "2026-02-10 - Institution 2 low enrollment—should we extend timeline or adjust target? → Decided: Extend recruitment 4 weeks for Institution 2",
+    "2026-05-10 - Preliminary interview themes emerging—should we adjust remaining interview questions? → Decided: Yes, add follow-up probe about major-specific support",
+    "2026-06-20 - Should we use NVivo or manual coding? Team split on efficiency vs control → Decided: Use NVivo but manual verification of coding—ensures consistency",
+    "2026-07-15 - HLM shows institutional variance accounts for 23% of persistence difference—implications? → Decided: This is the key finding—institutional context matters more than previously thought"
+  ],
+  "important_files": [],
+  "context": [
+    "2026-01-25 - Preliminary power analysis suggests n=500 sufficient with institutional clustering",
+    "2026-04-01 - Institution 1 (R1): 156 survey responses (target: 125)",
+    "2026-04-01 - Institution 2 (Regional): 98 survey responses (target: 125, struggling with recruitment)",
+    "2026-04-15 - Interview recruitment: 28 students agreed (target: 30)",
+    "2026-04-15 - Interview pool: 40% switched from STEM, 60% still persisting",
+    "2026-04-20 - Demographic analysis: 45% first-generation, 55% continuing-generation",
+    "2026-04-20 - Discipline representation: 35% biology, 25% engineering, 20% chemistry, 20% physics",
+    "2026-05-10 - Early theme: institutional support varies dramatically by major",
+    "2026-06-15 - Strong correlation between institutional support and persistence (r=0.67, p<.001)",
+    "2026-06-15 - Effect larger for first-gen students (r=0.72) than continuing-gen (r=0.58)",
+    "2026-07-10 - HLM shows institutional variance accounts for 23% of persistence difference",
+    "2026-07-20 - Themes: 1) peer community, 2) mentorship, 3) belonging, 4) major relevance, 5) financial security, 6) identity affirmation",
+    "2026-07-25 - Qualitative data suggests institutional support can compensate for major fit concerns"
+  ]
+}

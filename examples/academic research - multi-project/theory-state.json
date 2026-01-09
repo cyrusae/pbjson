@@ -1,0 +1,22 @@
+{
+  "subsystem": "theory",
+  "what_we_decided": [
+    "2026-01-25 - Use Tinto as foundation but extend with Braxton's institutional context model"
+  ],
+  "what_we_built": [
+    "2026-01-22 - Literature review outline (search: lit_review_outline.md, 15 major studies)",
+    "2026-01-23 - Tinto's Integration Theory application (search: tinto_framework.md)",
+    "2026-01-24 - Institutional support framework synthesis (search: support_framework.md)"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [
+    "2026-01-25 - Should we use Tinto or newer retention models? → Decided: Use Tinto as foundation but extend with Braxton's institutional context model"
+  ],
+  "important_files": [
+    "2026-01-24 - literature_matrix.md - all studies coded by methodology and findings"
+  ],
+  "context": [
+    "2026-01-23 - Tinto foundational but criticized for not addressing institutional context",
+    "2026-01-24 - Key finding: no studies examine intersection of first-gen status + institutional support"
+  ]
+}
