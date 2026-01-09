@@ -140,15 +140,15 @@ For complex projects, create separate state files per subsystem:
 
 ```bash
 ./pbjson.py decided:api "Use FastAPI for REST endpoints"
-# Creates: api-state.json
+# Logs decision in: api-state.json
 
 ./pbjson.py question:frontend "React or Vue?"
-# Creates: frontend-state.json
+# Logs question in: frontend-state.json
 ```
 
 Each subsystem file has the same structure as `project.json`.
 
-**pbjson.py** should be capable of initializing its own project files when run by a Claude instance, but if you run into issues, you can resolve this by initializing an empty `.json` file in your project context:
+**pbjson** should be capable of initializing its own project files when run by a Claude instance, but if you run into issues, you can resolve this by **initializing an empty `.json` file in your project context:**
 
 ```json
 {
