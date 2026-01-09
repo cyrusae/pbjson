@@ -370,3 +370,8 @@ Keep in mind that **pbjson is intentionally minimal**—it's a single-purpose, f
 **Project Breadcrumbs JSON** — leaving a trail of decisions so you (and your AI assistant) can find your way back.
 
 *Full disclosure: I didn't come up with the pun. That was fate, in the form of Claude Sonnet 4.5 itself: this project was named by its main user audience!* 
+
+---
+
+The original version of this project was directly inspired by work by [Theophite](https://github.com/Theophite) on his interactive fiction systems.
+
