@@ -1,0 +1,19 @@
+{
+  "what_we_decided": [
+    "2026-01-09 - Build a habit tracker app to replace spreadsheets",
+    "2026-01-18 - Add CSV export for user data"
+  ],
+  "what_we_built": [
+    "2026-01-20 - Documentation site (search: docs/)"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [],
+  "important_files": [
+    "2026-01-09 - README.md - project overview and setup",
+    "2026-01-09 - docs/architecture.md - system design decisions"
+  ],
+  "context": [
+    "2026-01-09 - Target users: non-technical, prefer mobile-first UI",
+    "2026-01-18 - Privacy-conscious users asking for data export, GDPR best practice"
+  ]
+}

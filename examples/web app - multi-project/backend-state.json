@@ -1,0 +1,28 @@
+{
+  "subsystem": "backend",
+  "what_we_decided": [
+    "2026-01-09 - Use FastAPI for REST API",
+    "2026-01-15 - Add categories as separate table with many-to-many relationship"
+  ],
+  "what_we_built": [
+    "2026-01-10 - User authentication endpoints (search: auth.py, login, signup, logout)",
+    "2026-01-10 - JWT token management (search: tokens.py, refresh)",
+    "2026-01-11 - User profile endpoints (search: profiles.py, GET/PUT /users/:id)",
+    "2026-01-11 - Database migrations with Alembic (search: alembic/)",
+    "2026-01-15 - Categories API (search: categories.py)",
+    "2026-01-15 - Updated habit model with category foreign keys (search: models/habit.py v2)",
+    "2026-01-18 - Export endpoint (search: export.py, CSV generation)"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [
+    "2026-01-11 - Should we use bcrypt or argon2 for password hashing? → Decided: Use argon2 (better security than bcrypt), via python-argon2"
+  ],
+  "important_files": [
+    "2026-01-09 - main.py - FastAPI app entry point",
+    "2026-01-10 - auth.py - authentication logic"
+  ],
+  "context": [
+    "2026-01-09 - Python shop, team familiar with async patterns",
+    "2026-01-10 - Using PostgreSQL on Render"
+  ]
+}

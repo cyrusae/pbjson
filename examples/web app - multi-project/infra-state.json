@@ -1,0 +1,21 @@
+{
+  "subsystem": "infra",
+  "what_we_decided": [
+    "2026-01-09 - Deploy on Render for simplicity over bare metal"
+  ],
+  "what_we_built": [
+    "2026-01-11 - PostgreSQL setup on Render (search: terraform/, schema.sql)",
+    "2026-01-12 - CI/CD pipeline with GitHub Actions (search: .github/workflows/)",
+    "2026-01-12 - Deployment scripts (search: deploy.sh)"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [],
+  "important_files": [
+    "2026-01-11 - deploy.sh - automated deployment script",
+    "2026-01-12 - .github/workflows/ - CI/CD configuration"
+  ],
+  "context": [
+    "2026-01-09 - Early stage, don't want to manage servers yet",
+    "2026-01-11 - Render handles daily backups automatically, good enough for now"
+  ]
+}

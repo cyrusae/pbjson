@@ -1,0 +1,20 @@
+{
+  "subsystem": "domain",
+  "what_we_decided": [],
+  "what_we_built": [
+    "2026-01-12 - Habit model (search: models/habit.py, with streak calculation)",
+    "2026-01-12 - Habit log model for daily tracking (search: models/habitlog.py)",
+    "2026-01-18 - Data serialization for export (search: models/export.py)"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [
+    "2026-01-15 - How to model habit streaks—by calendar day or 24-hour period? → Decided: Use calendar day model with midnight UTC reset"
+  ],
+  "important_files": [
+    "2026-01-12 - models/habit.py - core habit domain model"
+  ],
+  "context": [
+    "2026-01-12 - Users need visual feedback on progress",
+    "2026-01-12 - Calendar day easier to implement, resets at midnight UTC"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "subsystem": "frontend",
+  "what_we_decided": [
+    "2026-01-09 - Use React with TypeScript"
+  ],
+  "what_we_built": [
+    "2026-01-10 - Login/signup page with form validation (search: Auth.tsx)",
+    "2026-01-10 - Dashboard layout and routing (search: Dashboard.tsx)",
+    "2026-01-11 - Habit card component showing daily progress (search: HabitCard.tsx)",
+    "2026-01-11 - Responsive design for mobile (search: styles/responsive.css)",
+    "2026-01-15 - Category selector component (search: CategorySelect.tsx)",
+    "2026-01-15 - Update habit creation form (search: NewHabitForm.tsx)",
+    "2026-01-16 - Enhanced visual feedback on mobile (search: HabitCard.tsx mobile styles)",
+    "2026-01-18 - Export button and download UX (search: ExportButton.tsx)"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [
+    "2026-01-12 - Redux, Zustand, or Context API for state? → Decided: Use React Context + custom hooks for now, migrate to Zustand if it becomes unwieldy",
+    "2026-01-16 - Mobile users can't easily see which habit they're logging—text too small? → Resolved: Increase habit name font size on card, add visual color coding for categories"
+  ],
+  "important_files": [
+    "2026-01-09 - App.tsx - main React component and routing",
+    "2026-01-10 - components/ - reusable UI components"
+  ],
+  "context": [
+    "2026-01-09 - Designer has React experience, wants Tailwind for styling",
+    "2026-01-09 - Mobile-first design priority"
+  ]
+}
