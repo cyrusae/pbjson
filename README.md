@@ -186,7 +186,7 @@ Each folder contains a `README.md` usage story and the `project.json` + `*-state
 
 ### Real samples
 
-- **[`meta-example`](https://github.com/cyrusae/pbjson/tree/main/examples/meta-example)**: Snapshot of **pbjson**'s development with the contents of an actual Claude project tracking it, including revisions to this README.
+- **[`examples/meta-example`](https://github.com/cyrusae/pbjson/tree/main/examples/meta-example)**: Snapshot of **pbjson**'s development with the contents of an actual Claude project tracking it, including revisions to this README.
 
 ## Best Practices
 
