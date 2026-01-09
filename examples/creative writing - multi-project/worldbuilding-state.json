@@ -1,0 +1,28 @@
+{
+  "subsystem": "worldbuilding",
+  "what_we_decided": [
+    "2026-01-09 - Earth date: 2087, near-future tech",
+    "2026-01-09 - First contact happens at Jupiter, not Earth orbit",
+    "2026-01-12 - Aliens were already in the solar system exploring—first signal from outer solar system probe"
+  ],
+  "what_we_built": [
+    "2026-01-11 - Earth timeline (search: timeline.md, 2040-2087)",
+    "2026-01-11 - Spacecraft specifications (search: spacecraft.md, Achilles class)",
+    "2026-01-12 - Alien physiology (search: aliens.md, silicon-based, hive-minded)",
+    "2026-01-15 - Jupiter environment specifications (search: jupiter_env.md)",
+    "2026-01-20 - Alien exploration timeline (search: exploration_timeline.md)"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [
+    "2026-01-11 - What do aliens look like? Humanoid? Truly alien? → Resolved: Non-humanoid but bilaterally symmetric, hive intelligence but individual-capable, communicates via color patterns",
+    "2026-01-15 - Timeline problem: alien homeworld is 8 light-years away. How did they reach Earth so quickly? → Resolved: Aliens were already in the solar system exploring"
+  ],
+  "important_files": [
+    "2026-01-09 - worldbuilding/ - master folder for all world details"
+  ],
+  "context": [
+    "2026-01-09 - Gives more time for negotiation before aliens reach political centers",
+    "2026-01-11 - Humans have Mars colonies but no jump drive yet",
+    "2026-01-12 - Aliens: silicon-based, hive-minded but capable of individuality"
+  ]
+}

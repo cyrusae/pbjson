@@ -1,0 +1,28 @@
+{
+  "subsystem": "characters",
+  "what_we_decided": [
+    "2026-01-09 - Protagonist is a translator, not a scientist or military",
+    "2026-01-12 - Keep first draft consistent, revise in editing pass for character consistency"
+  ],
+  "what_we_built": [
+    "2026-01-12 - Dr. Evelyn Chen - protagonist (search: chen_profile.md)",
+    "2026-01-12 - Commander Okonkwo - military liaison (search: okonkwo_profile.md)",
+    "2026-02-20 - Character revision notes for Chen's defensive personality (search: chen_notes_v2.md)"
+  ],
+  "what_we_need_to_decide": [
+    "2026-01-12 - Should Chen have a romantic subplot or keep focus on first contact?",
+    "2026-02-01 - Should I go back and revise Chapters 1-5 to show this defensiveness earlier?"
+  ],
+  "what_we_resolved": [
+    "2026-02-01 - early revision → Decided: Keep first draft consistent, revise in editing pass for character consistency",
+    "2026-03-05 - Should Okonkwo's subplot resolve? Current ending leaves it open → Decided: Keep it open—readers should wonder what happens to him, implies consequences ongoing"
+  ],
+  "important_files": [
+    "2026-01-09 - character_profiles.md - detailed profiles and motivations"
+  ],
+  "context": [
+    "2026-01-09 - Unique perspective on communication and cultural misunderstanding",
+    "2026-01-12 - Worried romance would distract from main themes",
+    "2026-02-01 - Chen's character deepened in Chapter 6—she's more defensive than I initially wrote"
+  ]
+}

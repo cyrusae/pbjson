@@ -1,0 +1,35 @@
+{
+  "what_we_decided": [
+    "2026-01-09 - First contact story, told from human perspective, not aliens",
+    "2026-01-09 - Hard sci-fi grounded in physics, not fantasy",
+    "2026-01-12 - Move first major conflict to Chapter 7 for pacing",
+    "2026-02-01 - Revision priorities: voice > consistency > pacing"
+  ],
+  "what_we_built": [
+    "2026-01-15 - Outline and chapter breakdown (search: outline.md)",
+    "2026-01-20 - First draft: Chapters 1-8 (search: ch01-08.md)",
+    "2026-02-01 - First draft: Chapters 9-17 (search: ch09-17.md)",
+    "2026-02-15 - First draft: Chapters 18-25 (search: ch18-25.md)",
+    "2026-02-20 - Revision pass 1: Chen's voice (search: ch01-08_v2.md)",
+    "2026-03-01 - Revision pass 2: Alien descriptions (search: alien_descriptions_v2.md)",
+    "2026-03-10 - Revision pass 3: Chapters 1-4 restructure (search: ch01-04_v3.md)",
+    "2026-03-20 - Final manuscript ready for querying (search: manuscript_final.md)"
+  ],
+  "what_we_need_to_decide": [],
+  "what_we_resolved": [
+    "2026-01-15 - Does the climax work logically? Can humans really choose differently? → Resolved: Yes, adds weight to the choice and invites reader interpretation"
+  ],
+  "important_files": [
+    "2026-01-09 - outline.md - chapter-by-chapter breakdown",
+    "2026-01-09 - worldbuilding/ - maps, tech specs, cultural notes",
+    "2026-03-20 - manuscript_final.md - final draft ready to query"
+  ],
+  "context": [
+    "2026-01-09 - Target audience: fans of Ted Chiang, Project Hail Mary, The Three-Body Problem",
+    "2026-01-09 - Novel length target: 100,000-120,000 words",
+    "2026-02-15 - Completed first draft: 102,000 words",
+    "2026-02-20 - Agent feedback: strengthen Chen's voice, make aliens more alien",
+    "2026-03-01 - Beta readers: Chapter 3 pacing issue confirmed, Chapter 19 emotional beat landed well",
+    "2026-03-20 - Manuscript ready for querying"
+  ]
+}

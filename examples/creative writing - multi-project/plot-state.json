@@ -1,0 +1,30 @@
+{
+  "subsystem": "plot",
+  "what_we_decided": [
+    "2026-01-09 - Three act structure: discovery → communication → choice",
+    "2026-01-12 - Move first major conflict to Chapter 7 for pacing",
+    "2026-01-20 - Reduce failed communication attempts to 2, make them count more"
+  ],
+  "what_we_built": [
+    "2026-01-12 - Chapter-by-chapter outline (search: chapter_outline.md, 25 chapters)",
+    "2026-01-20 - Revised Chapters 12-14 (search: ch12-14_v2.md, pacing tightened)",
+    "2026-02-01 - Chapter 17: The Probe Revelation (search: ch17_probe.md, 3500 words, new scene)"
+  ],
+  "what_we_need_to_decide": [
+    "2026-02-15 - Did I resolve all plot threads from Act 1?",
+    "2026-02-15 - Does Chen's character arc feel earned?"
+  ],
+  "what_we_resolved": [
+    "2026-01-15 - Does the climax work logically? Can humans really choose differently? → Decided: Yes, adds weight to the choice and invites reader interpretation",
+    "2026-01-20 - Should I move the misunderstanding/conflict to Chapter 7 instead of Chapter 12? → Decided: Yes, gives more time for trust-building aftermath in later chapters",
+    "2026-01-20 - Chapter 12-15 feel repetitive. How many communication attempts before breakthrough? → Decided: Reduce to 2 failed attempts, make them count more"
+  ],
+  "important_files": [],
+  "context": [
+    "2026-01-09 - Act 1 is the mystery, Act 2 is the relationship, Act 3 is the consequence",
+    "2026-01-12 - Realized the middle act is sagging—need higher stakes earlier",
+    "2026-01-12 - Gives more time for trust-building aftermath in later chapters",
+    "2026-01-20 - First draft has 5 communication attempts, probably overkill",
+    "2026-02-01 - Opens up questions about alien motivation—explorers vs invaders"
+  ]
+}
