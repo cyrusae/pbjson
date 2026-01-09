@@ -39,8 +39,12 @@ The tool should create `project.json` automatically on first use and any subproj
 
 **Why:** Pick your favorite reason--
 
-1. The original developer prefers working in the conversation interface with Claude and then screening code manually, and **pbjson** is designed to accommodate that. (We're actively interested in accommodating other workflows--see "Contributing"!)
-2. Depending on Claude AI's web interface means **pbjson is as portable as Claude itself**--do you want to work on your project's architecture on the bus? In a waiting room? Anywhere you can have the Claude app open? Now you have your full context and structure, with the state-tracking it needs.
+1. The original developer prefers working in the conversation interface with Claude and then screening code manually, and **pbjson** is designed to accommodate that. 
+2. Depending on Claude AI's web interface means **pbjson is as portable as Claude itself**.
+
+Do you want to work on your project's architecture on the bus? In a waiting room? Anywhere you can have the Claude app open on your phone? Now you have your full context and structure, with the state-tracking it needs.
+
+We're actively interested in accommodating other workflows--see "Contributing"!
 
 ### Add this to your custom instructions:
 
