@@ -120,7 +120,7 @@ The tool creates a simple JSON file with six fields:
     "2026-01-09 - Use SQLite for caching - simpler than Redis for our scale"
   ],
   "what_we_built": [
-    "2026-01-09 - Database layer (search: db.py, sqlite)"
+    "2026-01-09 - Database layer (db.py, sqlite)"
   ],
   "what_we_need_to_decide": [
     "2026-01-09 - Should we add user authentication?"
@@ -172,7 +172,7 @@ Name the file in your first message and Claude will be able to use it going forw
 ### When to Use Each Command
 
 - **`decided`**: Record architectural choices AFTER discussing with your team/AI. Not for proposals, only confirmed decisions.
-- **`built`**: Track completed work with searchable keywords in parentheses: `built "User auth (search: auth.py, login)"`
+- **`built`**: Track completed work with searchable keywords in parentheses: `built "User auth (auth.py, login)"`
 - **`question`**: Capture open decisions that need input. Review these regularly.
 - **`file`**: Only for key entry points (3-5 max). Avoid listing every file—focus on "where do I start for X?"
 - **`context`**: Store constraints, user preferences, or background info that should persist across sessions.
