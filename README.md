@@ -33,21 +33,6 @@ Then context gets lost. You find yourself re-explaining decisions, searching thr
 
 The tool should create `project.json` automatically on first use and any subproject files when invoked. If you're having issues with this, initialize `.json` files manually in project context (see skeleton).
 
-### Intended use model
-
-**Where:** In any project developed with Claude (especially long-term ones) 
-
-**How:** `pbjson.py` is designed to go in a Claude project context in the web/app interface. **The script creates commands that Claude can run in its own server environment to document your conversations,** and the attached custom instructions provide structure for usage.
-
-**Why:** Pick your favorite reason--
-
-1. The original developer prefers working in the conversation interface with Claude and then screening code manually, and **pbjson** is designed to accommodate that. 
-2. Depending on Claude AI's web interface means **pbjson is as portable as Claude itself**.
-
-Do you want to work on your project's architecture on the bus? In a waiting room? Anywhere you can have the Claude app open on your phone? Now you have your full context and structure, with the state-tracking it needs.
-
-We're actively interested in accommodating other workflows--see "Contributing"!
-
 ### Add this to your custom instructions:
 
 ``` 
@@ -84,6 +69,21 @@ FIELD PURPOSES:
 - important_files: Entry points only (3-5 max) - "where do I start for X task?"
 - context: Background information, constraints, user preferences, anything else to remember
 ```
+
+### Intended use model
+
+**Where:** In any project developed with Claude (especially long-term ones) 
+
+**How:** `pbjson.py` is designed to go in a Claude project context in the web/app interface. **The script creates commands that Claude can run in its own server environment to document your conversations,** and the attached custom instructions provide structure for usage.
+
+**Why:** Pick your favorite reason--
+
+1. The original developer prefers working in the conversation interface with Claude and then screening code manually, and **pbjson** is designed to accommodate that. 
+2. Depending on Claude AI's web interface means **pbjson is as portable as Claude itself**.
+
+Do you want to work on your project's architecture on the bus? In a waiting room? Anywhere you can have the Claude app open on your phone? Now you have your full context and structure, with the state-tracking it needs.
+
+We're actively interested in accommodating other workflows--see "Contributing"!
 
 ### Manual Sync and Directory Limitations
 
