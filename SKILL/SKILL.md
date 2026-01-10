@@ -1,6 +1,11 @@
 ---
 name: pbjson
 description: Project state management for Claude-assisted development. Lightweight decision and work logger that tracks what was decided, built, questioned, and resolved across conversations using append-only JSON logs. Use when (1) User wants to track project decisions and progress, (2) Working on extended projects across multiple conversations, (3) User mentions wanting Claude to remember project context, (4) Managing multi-subsystem projects, or (5) User asks about project history or what was previously decided/built.
+license: MIT License
+compatibility: Designed for use with Claude.ai
+metadata:
+  author: cyrusae
+  version: "1.0"
 ---
 
 # pbjson - Project State Management
