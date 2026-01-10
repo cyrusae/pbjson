@@ -1,9 +1,13 @@
 {
   "what_we_decided": [
-    "2026-01-09 - Track README development separately from main project state to keep documentation discussions organized"
+    "2026-01-09 - Track README development separately from main project state to keep documentation discussions organized",
+    "2026-01-10 - Keep README monolithic with improved navigation (TOC + TL;DR) rather than splitting into multiple files - preserves copy-paste portability and single-file context model",
+    "2026-01-10 - Add detailed workflow/usage tips section for handling manual sync, knowing when to refresh state, and managing project context files effectively",
+    "2026-01-10 - Create TIPS.md companion file - contains detailed command breakdowns, workflow best practices, troubleshooting, and manual sync guidance. README keeps quick reference only."
   ],
   "what_we_built": [
-    "2026-01-09 - Examples section added to README between JSON Structure and Best Practices (~line 172-190), includes domain coverage and AI-generated disclosure"
+    "2026-01-09 - Examples section added to README between JSON Structure and Best Practices (~line 172-190), includes domain coverage and AI-generated disclosure",
+    "2026-01-10 - Drafted new README structure with TOC, TL;DR section, streamlined content (removes detailed command breakdowns to TIPS.md)"
   ],
   "what_we_need_to_decide": [],
   "what_we_resolved": [
