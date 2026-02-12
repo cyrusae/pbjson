@@ -178,7 +178,7 @@ The `examples/generated/` directory contains four realistic **AI-generated** pro
 *Note: These examples were created with Claude to demonstrate realistic usage patterns. As pbjson gains real-world adoption, we may add examples from actual projects with permission from their creators. Feel free to suggest/contribute your own!*
 
 - **[`examples/generated/academic research - multi-project`](https://github.com/cyrusae/pbjson/tree/main/examples/generated/academic%20research%20-%20multi-project)**: Multi-file project showing development of a research study--literature review, methodology, data collection
-- **[`examples/generated/reative writing - multi-project`](https://github.com/cyrusae/pbjson/tree/main/examples/generated/creative%20writing%20-%20multi-project)**: Multi-file project showing development of a science fiction novel--worldbuilding, characters, plot/events, editing concerns
+- **[`examples/generated/creative writing - multi-project`](https://github.com/cyrusae/pbjson/tree/main/examples/generated/creative%20writing%20-%20multi-project)**: Multi-file project showing development of a science fiction novel--worldbuilding, characters, plot/events, editing concerns
 - **[`examples/generated/self-study - single-project`](https://github.com/cyrusae/pbjson/tree/main/examples/generated/self-study%20-%20single-project)**: Single-file project showing self-study synthesis--papers, concepts, synthesis, personal applied project
 - **[`examples/generated/web app - multi-project`](https://github.com/cyrusae/pbjson/tree/main/examples/generated/web%20app%20-%20multi-project)**: Multi-file project tracking a full-stack web application across frontend, backend, infrastructure and other concerns 
 
